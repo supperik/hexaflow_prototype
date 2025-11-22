@@ -1,0 +1,7 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+/Hexaflow prototype.apk.idsig
+/Hexaflow prototype1.apk
+/icon.svg
+/icon.svg.import

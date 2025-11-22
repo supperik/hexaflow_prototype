@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://b82y326upiivr"]
+
+[ext_resource type="Script" uid="uid://cv1cynu24weqm" path="res://scripts/level.gd" id="1_vsvp5"]
+[ext_resource type="PackedScene" uid="uid://ckdgc7wsj34vc" path="res://Scenes/HexGrid.tscn" id="2_8rbpu"]
+
+[node name="Level" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_vsvp5")
+
+[node name="HexGrid" parent="." instance=ExtResource("2_8rbpu")]
+position = Vector2(279.5, 469)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="VBoxContainer" parent="UI"]
+layout_mode = 1
+offset_left = 13.0
+offset_top = 15.0
+offset_right = 95.0
+offset_bottom = 143.0
+
+[node name="TaskLabel" type="Label" parent="UI/HBoxContainer"]
+layout_mode = 2
+
+[node name="TimerLabel" type="Label" parent="UI/HBoxContainer"]
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="UI/HBoxContainer"]
+layout_mode = 2
+
+[node name="MessageLabel" type="Label" parent="UI/HBoxContainer"]
+layout_mode = 2
+
+[node name="MovesLabel" type="Label" parent="UI/HBoxContainer"]
+layout_mode = 2

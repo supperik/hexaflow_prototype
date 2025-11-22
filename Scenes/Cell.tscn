@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://can8mhnh8ier2"]
+
+[ext_resource type="Script" uid="uid://dsr5cepcynyu3" path="res://scripts/cell.gd" id="1_rdgq0"]
+[ext_resource type="Texture2D" uid="uid://dvd3u1h3xhh8i" path="res://media/hexagon-svgrepo-com (4).svg" id="2_jgku0"]
+
+[node name="Cell" type="Area2D"]
+scale = Vector2(0.97, 0.97)
+script = ExtResource("1_rdgq0")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.1, 0.1)
+polygon = PackedVector2Array(27.100006, -400, -27.5, -400, -38.100006, -397, -41.5, -397, -54.5, -390, -56.600006, -390, -318.5, -230, -320.7, -230, -336.8, -217, -339, -217, -361, -190, -362.3, -190, -370.3, -172, -371.6, -172, -379, -142.20001, -379, 142.29999, -372, 167, -372, 170.5, -359, 192.40002, -359, 194.79999, -340, 214.70001, -340, 216.09998, -322, 228.09998, -322, 229.09998, -58, 388, -58, 389.40002, -29.799988, 400, 29.799988, 400, 43.399994, 395, 46.600006, 395, 59.5, 387, 61.600006, 387, 327.5, 224, 329.8, 224, 347.90002, 207, 349.09998, 207, 362.09998, 188, 363.40002, 188, 373.40002, 163, 374.7, 163, 377.7, 144, 379, 144, 379, -142.29999, 372, -167, 372, -170.5, 359, -192.5, 359, -194.8, 340, -214.8, 340, -216.1, 322, -228.1, 322, -229.1, 58, -388.1, 58, -389.4)
+
+[node name="Sprite" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+clip_children = 2
+scale = Vector2(0.103, 0.103)
+texture = ExtResource("2_jgku0")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_shape_entered" from="." to="." method="_on_mouse_shape_entered"]
